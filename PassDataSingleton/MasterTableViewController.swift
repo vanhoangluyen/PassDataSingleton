@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class MasterTableViewController: UITableViewController {
     
     
     override func viewDidLoad() {
@@ -24,12 +24,6 @@ class TableViewController: UITableViewController {
         tableView.reloadData()
     }
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return DataService.shared.numbers.count
@@ -40,9 +34,17 @@ class TableViewController: UITableViewController {
         cell.textLabel?.text = String(DataService.shared.numbers[indexPath.row])
         return cell
     }
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+//            DataService.shared.numbers.remove(at: indexPath.row)
+            DataService.shared.removeData(from: indexPath)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        tableView.reloadData()
+    }
     // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let detailViewController = segue.destination as? ViewController {
+        if let detailViewController = segue.destination as? DetailViewController {
             if let index = tableView.indexPathForSelectedRow {
                 detailViewController.index = index.row
             }

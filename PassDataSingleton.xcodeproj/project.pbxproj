@@ -8,24 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		563ACE0D206B346000877DDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563ACE0C206B346000877DDD /* AppDelegate.swift */; };
-		563ACE0F206B346000877DDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563ACE0E206B346000877DDD /* ViewController.swift */; };
+		563ACE0F206B346000877DDD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563ACE0E206B346000877DDD /* DetailViewController.swift */; };
 		563ACE12206B346000877DDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 563ACE10206B346000877DDD /* Main.storyboard */; };
 		563ACE14206B346000877DDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 563ACE13206B346000877DDD /* Assets.xcassets */; };
 		563ACE17206B346000877DDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 563ACE15206B346000877DDD /* LaunchScreen.storyboard */; };
 		563ACE1F206B34DD00877DDD /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563ACE1E206B34DD00877DDD /* DataService.swift */; };
-		563ACE21206B358F00877DDD /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563ACE20206B358F00877DDD /* TableViewController.swift */; };
+		563ACE21206B358F00877DDD /* MasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563ACE20206B358F00877DDD /* MasterTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		563ACE09206B346000877DDD /* PassDataSingleton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PassDataSingleton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		563ACE0C206B346000877DDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		563ACE0E206B346000877DDD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		563ACE0E206B346000877DDD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		563ACE11206B346000877DDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		563ACE13206B346000877DDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		563ACE16206B346000877DDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		563ACE18206B346100877DDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		563ACE1E206B34DD00877DDD /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
-		563ACE20206B358F00877DDD /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		563ACE20206B358F00877DDD /* MasterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				563ACE0C206B346000877DDD /* AppDelegate.swift */,
-				563ACE0E206B346000877DDD /* ViewController.swift */,
-				563ACE10206B346000877DDD /* Main.storyboard */,
-				563ACE20206B358F00877DDD /* TableViewController.swift */,
 				563ACE1E206B34DD00877DDD /* DataService.swift */,
+				563ACE20206B358F00877DDD /* MasterTableViewController.swift */,
+				563ACE0E206B346000877DDD /* DetailViewController.swift */,
+				563ACE10206B346000877DDD /* Main.storyboard */,
 				563ACE13206B346000877DDD /* Assets.xcassets */,
 				563ACE15206B346000877DDD /* LaunchScreen.storyboard */,
 				563ACE18206B346100877DDD /* Info.plist */,
@@ -97,7 +97,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Hoang Luyen";
 				TargetAttributes = {
 					563ACE08206B346000877DDD = {
@@ -143,9 +143,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				563ACE1F206B34DD00877DDD /* DataService.swift in Sources */,
-				563ACE0F206B346000877DDD /* ViewController.swift in Sources */,
+				563ACE0F206B346000877DDD /* DetailViewController.swift in Sources */,
 				563ACE0D206B346000877DDD /* AppDelegate.swift in Sources */,
-				563ACE21206B358F00877DDD /* TableViewController.swift in Sources */,
+				563ACE21206B358F00877DDD /* MasterTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +185,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -192,6 +193,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -242,6 +244,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -249,6 +252,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

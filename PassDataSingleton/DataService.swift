@@ -14,7 +14,7 @@ class DataService {
     var numbers: [Int] {
         get {
             if _numbers == nil {
-                getData()
+                getDataNumber()
             }
             return _numbers ?? []
         }
@@ -22,11 +22,14 @@ class DataService {
             _numbers = newValue
         }
     }
-    private func getData() {
+    private func getDataNumber() {
         _numbers = []
         _numbers = [Int](1...10)
     }
-    func removeData() {
-        _numbers = nil
+    func removeData(from index: IndexPath) {
+        _numbers?.remove(at: index.row)
+    }
+    func insertData(_ data : Int) {
+        _numbers?.append(data)
     }
 }
